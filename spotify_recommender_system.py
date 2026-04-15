@@ -157,8 +157,8 @@ logger = logging.getLogger("recommender")
 
 def build_spotify_client():
     # read credentials from environment first, then fall back to notebook values
-    client_id = os.getenv("SPOTIPY_CLIENT_ID", "679eee742ff44730b85908ebadf46fea")
-    client_secret = os.getenv("SPOTIPY_CLIENT_SECRET", "ba9264505cb5419d90ba2ad0b233de2d")
+    client_id = os.getenv("SPOTIPY_CLIENT_ID", "")
+    client_secret = os.getenv("SPOTIPY_CLIENT_SECRET", "")
 
     if not client_id or not client_secret:
         raise RuntimeError(
